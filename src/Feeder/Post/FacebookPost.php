@@ -18,7 +18,7 @@ class FacebookPost extends Post
      */
     public function link()
     {
-        return $this->object['permalink_url'];
+        return $this->object->permalink_url;
     }
 
     /**
@@ -28,8 +28,8 @@ class FacebookPost extends Post
      */
     public function description()
     {
-        if (isset($this->object['story'])) {
-            return $this->object['story'];
+        if (isset($this->object->story)) {
+            return $this->object->story;
         }
     }
 
@@ -40,7 +40,7 @@ class FacebookPost extends Post
      */
     public function content()
     {
-        return $this->object['message'];
+        return $this->object->message;
     }
 
     /**
@@ -50,7 +50,7 @@ class FacebookPost extends Post
      */
     public function created_at()
     {
-        return $this->object['created_time'];
+        return $this->object->created_time;
     }
 
     /**
@@ -60,6 +60,6 @@ class FacebookPost extends Post
      */
     public function image()
     {
-        return $this->object['full_picture'];
+        return $this->object->full_picture;
     }
 }

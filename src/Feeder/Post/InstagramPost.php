@@ -18,7 +18,7 @@ class InstagramPost extends Post
      */
     public function link()
     {
-        return $this->object['link'];
+        return $this->object->link;
     }
 
     /**
@@ -28,7 +28,7 @@ class InstagramPost extends Post
      */
     public function image()
     {
-        return $this->object['images']['low_resolution']['url'];
+        return $this->object->images->low_resolution->url;
     }
 
     /**
@@ -38,7 +38,7 @@ class InstagramPost extends Post
      */
     public function content()
     {
-        return $this->object['caption']['text'];
+        return $this->object->caption->text;
     }
 
     /**
@@ -48,6 +48,6 @@ class InstagramPost extends Post
      */
     public function created_at()
     {
-        return date('c', $this->object['created_time']);
+        return date('c', $this->object->created_time);
     }
 }

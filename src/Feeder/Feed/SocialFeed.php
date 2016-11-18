@@ -21,6 +21,13 @@ class SocialFeed implements FeedInterface
     protected $feeds;
 
     /**
+     * List of requested fields.
+     *
+     * @var array
+     */
+    protected $arguments = [];
+
+    /**
      * Construct feed.
      *
      * @param array $feeds
@@ -29,7 +36,7 @@ class SocialFeed implements FeedInterface
     public function __construct(array $feeds, $argument = [])
     {
         $this->feeds = $feeds;
-        $this->argument = $argument;
+        $this->argument = array_merge($this->arguments, $argument);
 
         $this->fetch();
     }

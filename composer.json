@@ -1,13 +1,11 @@
 {
     "name": "tonik/feeder",
-    "description": "Simple and easy PHP package to retrive posts from social profile feeds.",
+    "description": "Light and simple PHP library to fetch posts from social profile feeds.",
     "keywords": ["social", "feed", "stream", "facebook", "instagram", "twitter"],
     "license": "MIT",
     "require": {
         "php": ">=5.4",
-        "abraham/twitteroauth": "^0.7.1",
-        "facebook/graph-sdk": "^5.4.2",
-        "vinkla/instagram": "^5.0"
+        "guzzlehttp/guzzle": "^6.2"
     },
     "autoload": {
         "psr-4": {
