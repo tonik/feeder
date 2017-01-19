@@ -8,3 +8,6 @@ vendor
 Thumbs.db
 
 composer.lock
+
+bin
+coverage
