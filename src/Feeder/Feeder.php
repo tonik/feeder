@@ -2,7 +2,7 @@
 
 namespace Tonik\Feeder;
 
-use GuzzleHttp\Client;
+use GuzzleHttp\ClientInterface;
 use Tonik\Feeder\Feed\FacebookFeed;
 use Tonik\Feeder\Feed\InstagramFeed;
 use Tonik\Feeder\Feed\SocialFeed;
@@ -14,21 +14,11 @@ class Feeder
     /**
      * Construct feeder.
      *
-     * @param Client $client
+     * @param \GuzzleHttp\ClientInterface $client
      */
-    public function __construct(Client $client)
+    public function __construct(ClientInterface $client)
     {
         $this->client = $client;
-    }
-
-    /**
-     * Static constructor.
-     *
-     * @return self
-     */
-    public static function fetch()
-    {
-        return new static(new Client);
     }
 
     /**
