@@ -10,4 +10,11 @@ interface PostInterface
      * @return string
      */
     public function created_at();
+
+    /**
+     * Gets URI of post.
+     *
+     * @return string
+     */
+    public function link();
 }
