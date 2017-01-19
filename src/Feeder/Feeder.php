@@ -29,7 +29,7 @@ class Feeder
      *
      * @return \Tonik\Feeder\Feed\TwitterFeed
      */
-    public function twitter($profile, array $arguments = [])
+    public function twitter($profile, array $arguments)
     {
         return new TwitterFeed($this->client, [
             'name' => $profile,
@@ -48,7 +48,7 @@ class Feeder
      *
      * @return \Tonik\Feeder\Feed\FacebookFeed
      */
-    public function facebook($profile, array $arguments = [])
+    public function facebook($profile, array $arguments)
     {
         return new FacebookFeed($this->client, [
             'name' => $profile,
@@ -67,7 +67,7 @@ class Feeder
      *
      * @return \Tonik\Feeder\Feed\InstagramFeed
      */
-    public function instagram($profile, array $arguments = [])
+    public function instagram($profile, array $arguments)
     {
         return new InstagramFeed($this->client, ['name' => $profile]);
     }
