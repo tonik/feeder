@@ -63,11 +63,10 @@ class Feeder
      * Creates Instagram feed.
      *
      * @param  string $profile
-     * @param  array  $arguments
      *
      * @return \Tonik\Feeder\Feed\InstagramFeed
      */
-    public function instagram($profile, array $arguments)
+    public function instagram($profile)
     {
         return new InstagramFeed($this->client, ['name' => $profile]);
     }
