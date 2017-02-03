@@ -56,4 +56,20 @@ class TwitterPost extends Post
     {
         return $this->object->created_at;
     }
+
+    /**
+     * Handle json serialize.
+     *
+     * @return array
+     */
+    public function jsonSerialize()
+    {
+        return [
+            'post_type' => $this->post_type,
+            'link' => $this->link,
+            'content' => $this->content,
+            'image' => $this->image,
+            'created_at' => $this->created_at,
+        ];
+    }
 }

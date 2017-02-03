@@ -62,4 +62,21 @@ class FacebookPost extends Post
     {
         return $this->object->full_picture;
     }
+
+    /**
+     * Handle json serialize.
+     *
+     * @return array
+     */
+    public function jsonSerialize()
+    {
+        return [
+            'post_type' => $this->post_type,
+            'link' => $this->link,
+            'description' => $this->description,
+            'content' => $this->content,
+            'image' => $this->image,
+            'created_at' => $this->created_at,
+        ];
+    }
 }

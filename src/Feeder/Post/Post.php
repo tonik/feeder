@@ -2,9 +2,10 @@
 
 namespace Tonik\Feeder\Post;
 
+use JsonSerializable;
 use Tonik\Feeder\Contracts\PostInterface;
 
-abstract class Post implements PostInterface
+abstract class Post implements PostInterface, JsonSerializable
 {
     /**
      * The type of post.

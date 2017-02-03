@@ -50,4 +50,20 @@ class InstagramPost extends Post
     {
         return date('c', $this->object->created_time);
     }
+
+    /**
+     * Handle json serialize.
+     *
+     * @return array
+     */
+    public function jsonSerialize()
+    {
+        return [
+            'post_type' => $this->post_type,
+            'link' => $this->link,
+            'content' => $this->content,
+            'image' => $this->image,
+            'created_at' => $this->created_at,
+        ];
+    }
 }
